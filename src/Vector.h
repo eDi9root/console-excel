@@ -29,3 +29,5 @@ class Vector {
     ~Vector();
 };
 }
+
+#endif
