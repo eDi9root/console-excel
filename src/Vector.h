@@ -2,7 +2,7 @@
 #define VECTOR_H
 
 #include <string>
-using std::string
+using std::string;
 
 namespace Consolexcel {
 class Vector {

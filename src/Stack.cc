@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace std::string
+using std::string;
 
 namespace Consolexcel {
 

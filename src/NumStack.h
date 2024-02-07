@@ -1,6 +1,9 @@
 #ifndef NUMSTACK_H
 #define NUMSTACK_H
 
+#include <string>
+using std::string;
+
 namespace Consolexcel {
 
 class NumStack {
@@ -8,7 +11,7 @@ class NumStack {
         Node* prev;
         double s;
 
-        Node(node* prev, double s) : prev(prev), s(s) {}
+        Node(Node* prev, double s) : prev(prev), s(s) {}
     };
 
     Node* current;

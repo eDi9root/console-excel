@@ -1,11 +1,12 @@
 # ifndef STACK_H
 # define STACK_H
 
-#include <sting>
+#include <string>
 
-using std::string
+using std::string;
 
 namespace Consolexcel {
+
 class Stack {
     struct Node {
         Node* prev;
@@ -34,6 +35,7 @@ class Stack {
 
     ~Stack();
 };
+
 }
 
 #endif
