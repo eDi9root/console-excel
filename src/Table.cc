@@ -19,6 +19,18 @@ void Table::reg_cell(Cell* c, int row, int col) {
     data_table[row][col] = c;
 }
 
+int Table::to_numeric(const string& s) {
+    int row = s[0] - 'A';
+    int col = atoi(s.c_str() + 1) - 1;
+
+    if (row < max_row && col < max_col) {
+        if (data_table[row][col]) {
+            return data_table[row][col]->to_numeric();
+        }
+    }
+    return 0;
+}
+
 Table::~Table() {
     for (int i = 0; i < max_row; i++) {
         for (int j = 0; j < max_col; j++) {
