@@ -2,6 +2,7 @@
 #define CELL_H
 
 #include <string>
+#include <Table.h>
 using std::string;
 
 class Cell {
