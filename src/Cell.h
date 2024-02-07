@@ -1,6 +1,9 @@
 #ifndef CELL_H
 #define CELL_H
 
+#include <string>
+using std::string;
+
 class Cell {
   protected:
     int x, y;
@@ -8,10 +11,13 @@ class Cell {
     string data;
 
   public:
-    virtual string stringfy();
-    virtual int to_numeric();
+   // Returns the cell value as a string
+   virtual string stringfy();
 
-    Cell(string data, int x, int y, Table* table);
+   // Returns the cell value as a numeric
+   virtual int to_numeric();
+
+   Cell(string data, int x, int y, Table* table);
 };
 
 #endif
