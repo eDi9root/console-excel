@@ -1,5 +1,6 @@
 #include "Table.h"
 
+namespace Consolexcel {
 Table::Table(int max_row, int max_col) : max_row(max_row), max_col(max_col) {
     data_table = new Cell**[max_row];
     for (int i = 0; i < max_row; i++) {
@@ -74,4 +75,5 @@ Table::~Table() {
         delete[] data_table[i];
     }
     delete[] data_table;
+}
 }

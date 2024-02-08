@@ -5,6 +5,7 @@
 #include "Table.h"
 using std::string;
 
+namespace Consolexcel {
 class Cell {
   protected:
     int x, y;
@@ -20,5 +21,6 @@ class Cell {
 
    Cell(string data, int x, int y, Table* table);
 };
+}
 
 #endif

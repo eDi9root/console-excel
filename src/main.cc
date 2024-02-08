@@ -1,4 +1,6 @@
 
+#include "Table.h"
+
 
 int main() { 
     Consolexcel::Txt table(5, 5);

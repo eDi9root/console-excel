@@ -7,6 +7,7 @@ using std::string;
 
 class Cell;
 
+namespace Consolexcel {
 class Table {
   protected:
     int max_row, max_col;
@@ -36,5 +37,6 @@ class Table {
 
     ~Table();
 };
+}
 
 #endif

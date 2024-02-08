@@ -6,6 +6,7 @@
 
 using std::string;
 
+namespace Consolexcel {
 class Txt: public Table {
 
     string rep_char(int n, char c);
@@ -18,5 +19,6 @@ class Txt: public Table {
 
     string print_table();
 };
+}
 
 #endif

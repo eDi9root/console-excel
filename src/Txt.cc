@@ -1,5 +1,6 @@
 #include "Txt.h"
 
+namespace Consolexcel {
 Txt::Txt(int row, int col) : Table(row, col) {}
 
 string Txt::print_table() {
@@ -16,4 +17,5 @@ string Txt::print_table() {
         col_max_wide[i] = max_wide;
     }
     return total;
+}
 }
