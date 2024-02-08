@@ -31,6 +31,37 @@ int Table::to_numeric(const string& s) {
     return 0;
 }
 
+int Table::to_numeric(int row, int col) {
+    if (row < max_row && col < max_col && data_table[row][col]) {
+        return data_table[row][col]->to_numeric();
+    }
+    return 0;
+}
+
+string Table::stringify(const string& s) {
+    int row = s[0] - 'A';
+    int col = atoi(s.c_str() + 1) - 1;
+
+    if (row < max_row && col < max_col) {
+        if (data_table[row][col]) {
+            return data_table[row][col]->stringify();
+        }
+    }
+    return "";
+}
+
+string Table::stringify(int row, int col) {
+    if (row < max_row && col < max_col && data_table[row][col]) {
+        return data_table[row][col]->stringify();
+    }
+    return "";
+}
+
+std::ostream& operator<<(std::ostream& o, Table& table) {
+    o << table.print_table();
+    return o;
+}
+
 Table::~Table() {
     for (int i = 0; i < max_row; i++) {
         for (int j = 0; j < max_col; j++) {
